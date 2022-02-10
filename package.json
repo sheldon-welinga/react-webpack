@@ -7,8 +7,8 @@
   "private": true,
   "scripts": {
     "build": "rimraf dist && webpack --config webpack.prod.js",
-    "dev": "rimraf dist && webpack --config webpack.dev.js",
-    "start": "webpack-dev-server --config webpack.dev.js --open",
+    "dev": "webpack-dev-server --config webpack.dev.js --open --port=8080",
+    "start": "rimraf dist && webpack --config webpack.dev.js",
     "tsc": "tsc"
   },
   "dependencies": {

@@ -8,6 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist')
   },
+
   resolve: {
     aliasFields: ['browser'],
     extensions: ['.tsx', '.ts', '.js', '.json', '.scss']
@@ -54,10 +55,7 @@ module.exports = {
     new LoaderOptionsPlugin({
       debug: true,
       options: {
-        // resolve: {
-        // aliasFields: ['browser'],
-        // modules: ['src', 'node_modules'] // Assuming that your files are inside the src dir
-        // }
+        liveReload: !process.env.NODE_ENV
       }
     })
   ]
